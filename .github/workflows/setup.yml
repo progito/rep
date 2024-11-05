@@ -6,4 +6,11 @@ jobs:
     steps:
       - name: проверка кода
         uses: actions/checkout@v2
+      - name: установка python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.10'
+      - name: запустить тесты
+        run: |
+          pytest
         
